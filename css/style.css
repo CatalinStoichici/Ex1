@@ -30,21 +30,19 @@
   height: 100vh;
   width: 100vw;
 }
-
-.left_content {
+.content_left {
   flex: 1;
   width: 20%;
   margin: 0 20px 0 0;
 }
-
-.right_content {
+.content_right {
   margin: 20px 20px 0 20px;
   width: 80%;
   align-self: flex-start;
   background-color: rgba(7, 197, 134, 0.3);
   text-align: center;
 }
-.right_content .right_content-img {
+.content_right-img {
   width: 400px;
   height: 400px;
 }
@@ -52,20 +50,22 @@
 .sidebar {
   background-color: rgb(101, 131, 131);
 }
-.sidebar .sidebar_menu {
+.sidebar_menu {
   display: flex;
   justify-content: space-between;
   list-style: none;
   flex-direction: column;
+  padding-left: 0;
 }
-.sidebar .sidebar_item {
+.sidebar_item {
   margin: 10px 0 10px 0;
+  background-color: azure;
 }
-.sidebar .sidebar_item .sidebar_item-link {
+.sidebar_link {
   color: black;
   text-decoration: none;
 }
-.sidebar .sidebar_item:hover .sidebar_item-link {
+.sidebar_link:hover > div {
   background-color: rgba(250, 0, 0, 0.3);
   color: white;
 }
@@ -82,33 +82,46 @@
     margin: 0 20px 0 0;
   }
 }
-
-.sidebar {
-  background-color: rgb(101, 131, 131);
+@media screen and (max-width: 576px) {
+  .content_right {
+    height: 100vh;
+    margin: 20px 20px 0 0;
+    width: 100vw;
+    align-self: center;
+    background-color: rgba(7, 197, 134, 0.3);
+    text-align: center;
+  }
 }
-.sidebar .sidebar_menu {
-  display: flex;
-  justify-content: space-evenly;
-  list-style: none;
-  flex-direction: row;
-  padding-left: 0;
-  height: 50px;
-  width: 100vw;
-}
-.sidebar .sidebar_item .sidebar_item-link {
-  color: black;
-  text-decoration: none;
-}
-
-.right_content {
-  height: 100vh;
-  margin: 20px 20px 0 0;
-  width: 100vw;
-  align-self: center;
-  background-color: rgba(7, 197, 134, 0.3);
-  text-align: center;
-}
-.right_content .right_content-img {
+.content_right-img {
   width: 200px;
   height: 200px;
+}
+
+@media screen and (max-width: 576px) {
+  .sidebar {
+    background-color: rgb(101, 131, 131);
+  }
+}
+@media screen and (max-width: 576px) {
+  .sidebar_menu {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    flex-direction: row;
+    padding-left: 0;
+    height: 50px;
+    width: 100vw;
+  }
+}
+@media screen and (max-width: 576px) {
+  .sidebar_link {
+    color: black;
+    text-decoration: none;
+  }
+}
+@media screen and (max-width: 576px) {
+  .sidebar_link:hover > div {
+    background-color: rgba(250, 0, 0, 0.3);
+    color: white;
+  }
 }/*# sourceMappingURL=style.css.map */
